@@ -31,6 +31,8 @@ RUN zypper in -ly \
 RUN go get -u github.com/cloudflare/cfssl/cmd/...
 RUN ln -s /root/go/bin/* /bin/
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN rustup default nightly &&\
+    rustup update
 RUN rustup component add clippy rustfmt && \
     rustup target add \
         wasm32-unknown-unknown \

@@ -44,5 +44,6 @@ RUN cargo install \
     cargo-update \
     cargo-web \
     wasm-pack
+RUN export RUST_BACKTRACE=1
 RUN cargo install diesel_cli --no-default-features --features postgres
 RUN npm install -g rollup

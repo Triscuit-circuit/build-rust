@@ -1,4 +1,4 @@
-FROM opensuse/tumbleweed
+FROM ubuntu:latest
 ENV PATH /root/.cargo/bin:${PATH}
 RUN zypper in -t pattern -ly --force-resolution devel_C_C++
 RUN zypper in -ly \

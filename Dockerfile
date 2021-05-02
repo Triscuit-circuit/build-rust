@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM opensuse/tumbleweed
 ENV PATH /root/.cargo/bin:${PATH}
 RUN sudo apt-get install \
     alsa-devel \
